@@ -1,21 +1,26 @@
-MY boiler plate react with some files pre added
-
-Dependencies
-- SASS
-- react-router-dom
-
-Structure
-SRC
-- assets
-- componenets
-- context
-- hooks
-- pages
-    - routing
-        - Routes.jsx (define routes here)
-- main.jsx
-- index.scss
+//TODO For whole project
 
 
-run `npm i`
-and `npm update`
+
+1. Set up sign up + login Page
+2. Design UI and Pages
+3. Create Header (and Footer)
+
+
+next
+- implement auth context
+- do login page but first <- create custom fetchs
+
+
+
+
+2. 
+[unprotected]
+/ -> landing page
+/login -> login page
+/signup -> sign up page
+
+[protected]
+/user  -> User home page (display folders)
+    /folder/:folderId -> (display list of files in folder)
+        /file/:fildId -> (display content of files)
