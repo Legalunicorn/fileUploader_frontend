@@ -1,0 +1,87 @@
+// @use "../../assets//styles/mixins" as m;
+
+
+//parent of auth is Content take note
+.auth-page{
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auth-form-container{
+    width: 250px;
+    min-width: 20vw;
+    font-family: Outfit;
+    height: fit-content;
+    background-color: var(--color-light);
+    border-radius: 1rem;;
+    color: var(--color-grey);
+    padding: 1.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+
+    p:first-child{
+        margin: 0.75rem 0;
+        text-align: center;
+        font-family: Alata;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    P:last-child{
+        font-family: Inter;
+        margin-top: 0.25rem;
+        font-size: 0.67rem;
+        text-align: center;
+        color: var(--color-light-grey-2);
+        font-style: italic;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    label{
+        font-family: Outfit;
+        margin-top: 0.75rem;
+    }
+
+    input{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid var(--color-light-grey-1);
+        padding: 0.5rem 0.75rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        background-color: var(--color-light);
+        transition: 0.3s ease-in-out;
+
+
+        &:focus{
+            // padding-bottom: 1rem;
+            transform: translateY(-0.25rem);
+
+        }
+    }
+
+    button{
+        font-family: Alata;
+        background-color: var(--color-light-grey-2);
+        color:var(--color-light);
+        border-radius: 0.75rem;
+        border: 0;
+        margin: 1.5rem 0 0.5rem 0;
+        padding: 0.5rem 0.75rem;
+
+        &:hover{
+            background-color: var(--color-dark);
+        }
+
+        &:disabled{
+            opacity: 0.6;
+        }
+
+    }
+}

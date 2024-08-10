@@ -1,10 +1,23 @@
-
+@use "./assets/styles/mixins" as *;
 
 
 :root{
-
+  font-family: Inter,Outfit,Arial;
   font-size:16px;
   line-height: 1.5rem;
+  background-color: #1E2126;
+  color: #f0f0f0;
+
+
+  --pm: 0.5rem;
+  --color-dark: #1E2126;
+  --color-light: #f0f0f0;
+
+  --color-grey: #2c2e3a;
+  --color-light-grey-1: #b3b4bd;
+  --color-light-grey-2: #444758;
+  --color-light-green: #748d92;
+
 
 }
 
@@ -14,6 +27,23 @@
   margin:0;
   padding: 0;
   box-sizing: 0;
+}
+
+#main{
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  div:last-child{
+    margin-top:auto;
+  }
+}
+
+.error-msg{
+  font-size: 0.9rem;
+  color: red;
+  margin: 0.5rem 0;
+  padding: 0.25rem;
 }
 
 /*

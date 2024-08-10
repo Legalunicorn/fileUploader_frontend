@@ -3,39 +3,46 @@ import { ProtectedRoute } from './ProtectedRoute'
 
 
 
-
+import Layout from './Layout'
 //import pages 
+import Login from "../auth/Login"
+import Signup from '../auth/Signup'
 
 
 
 const router = createBrowserRouter([
     {
-        element: <p> hii</p>,
-        path:"/", 
-    },
-    {
-        path:"/auth/login",
-        element: <p>login</p>
-    },
-    {
-        path:"/auth/signup",
-        element: <p>signup</p>
-    },
-    {
-        path:"/user",
-        element: <ProtectedRoute/>,
+        element: <Layout/>,
         children:[
             {
-            path:"folders/:folderId",
-            element:<p>folder</p>,
-            children:[
-                {
-                    path:"file/:fildId",
-                    element: <p>file</p>
+                element: <p> hii</p>,
+                path:"/", 
+            },
+            {
+                path:"/auth/login",
+                element: <Login/>
+            },
+            {
+                path:"/auth/signup",
+                element: <Signup/>
+            },
+            {
+                path:"/user",
+                element: <ProtectedRoute/>,
+                children:[
+                    {
+                    path:"folders/:folderId",
+                    element:<p>folder</p>,
+                    children:[
+                        {
+                            path:"file/:fildId",
+                            element: <p>file</p>
 
+                        }
+                    ]
                 }
-            ]
-        }
+                ]
+            }
         ]
     }
 ])
