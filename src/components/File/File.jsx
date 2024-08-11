@@ -18,7 +18,7 @@ export default function File({file}){
                 <span class="material-symbols-outlined">
                 more_vert
                 </span>
-                {/* <a href={file.downloadLink}>Download</a> */}
+                <a href={file.downloadLink}>Download</a>
             </div>
         </div>
     )
