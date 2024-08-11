@@ -78,7 +78,7 @@ export default function Login(){
                         <span>Don't have  an account? </span>
                         <Link to="/auth/signup">Sign in</Link>
                     </p>  
-                </Form>
+                </Form> 
             </div>
         </div>
 
