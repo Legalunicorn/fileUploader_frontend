@@ -1,0 +1,27 @@
+
+.file-card{
+    // border :1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-thumbnail{
+    max-width: 300px;
+    height: clamp(30px, 150px, 150px);
+    max-width: 400px;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    // padding: 0.5rem;
+}
+
+.file-meta{
+    margin-top: auto;
+    display:flex;
+    align-items: center;
+    // padding: 0 0.25rem;
+    span{
+        font-size: 1.2rem;
+        margin-left: auto;
+    }
+}
+

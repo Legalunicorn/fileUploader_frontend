@@ -1,0 +1,44 @@
+
+.folder-page{
+    padding: 2rem;
+
+    .page-header{
+        padding-right: 1.5rem;
+        display: flex;
+        align-items: center;
+
+        span{
+            font-size: 3rem;
+            padding-bottom: 1rem;
+            margin-left:auto;
+        }
+    }
+}
+
+.folder-card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    .card-thumbnail{
+        font-size: 8rem;
+    }
+}
+
+.file-list{
+    display:flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.folder-meta{
+    padding: 0 0.25rem;
+    display:flex;
+    align-items: center;
+
+    span{
+        margin-left: auto;
+        font-size: 1.2rem;
+    }
+
+
+}

@@ -1,0 +1,21 @@
+.user-page{
+    padding: 2rem;
+
+    .page-header{
+        padding-right: 1.5rem;
+        display: flex;
+        align-items: center;
+
+        span{
+            font-size: 3rem;
+            padding-bottom: 1rem;
+            margin-left:auto;
+        }
+    }
+}
+
+
+.folders-list{
+    display:flex;
+    gap: 1rem;
+}

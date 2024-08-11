@@ -6,8 +6,6 @@ import { useNavigate } from "react-router-dom";
 const API_URL = import.meta.env.VITE_API_URL;
 
 export const authFetch =  async(url,user,options)=>{
-    const {user} = useAuthContext();
-    const navigate = useNavigate();
 
     const response = await fetch(API_URL+url,
         {

@@ -7,6 +7,9 @@ import Layout from './Layout'
 //import pages 
 import Login from "../auth/Login"
 import Signup from '../auth/Signup'
+import UserPage from '../UserPage/UserPage'
+import Folder from '../Folder/Folder'
+import UploadFile from '../uploadFile/UploadFile'
 
 
 
@@ -15,7 +18,7 @@ const router = createBrowserRouter([
         element: <Layout/>,
         children:[
             {
-                element: <p> hii</p>,
+                element: <p> Landing page</p>,
                 path:"/", 
             },
             {
@@ -31,16 +34,27 @@ const router = createBrowserRouter([
                 element: <ProtectedRoute/>,
                 children:[
                     {
-                    path:"folders/:folderId",
-                    element:<p>folder</p>,
-                    children:[
-                        {
-                            path:"file/:fildId",
-                            element: <p>file</p>
+                        path:"",
+                        element:<UserPage/>
+                    },
+                    {
+                        path:"folders/:folderId",
+                        children:[
+                            {
+                                path:"",
+                                element:<Folder/>
+                            },
+                            {
+                                path:"new",
+                                element:<UploadFile/>
+                            },
+                            {
+                                path:"file/:fildId",
+                                element: <p>file</p>
 
-                        }
-                    ]
-                }
+                            }
+                        ]
+                    }
                 ]
             }
         ]
