@@ -10,6 +10,7 @@ import Signup from '../auth/Signup'
 import UserPage from '../UserPage/UserPage'
 import Folder from '../Folder/Folder'
 import UploadFile from '../uploadFile/UploadFile'
+import CreateFolder from '../createFolder/CreateFolder'
 
 
 
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
                     {
                         path:"",
                         element:<UserPage/>
+                    },
+                    {
+                        path:"new",
+                        element:<CreateFolder/>
                     },
                     {
                         path:"folders/:folderId",

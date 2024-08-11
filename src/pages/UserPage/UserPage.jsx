@@ -3,12 +3,14 @@ import "./userPage.scss"
 import {authFetch} from "../../utils/authFetch"
 import { useAuthContext } from "../../hooks/useAuthContext"
 import FolderCard from "../../components/Folder/FolderCard";
+import { useNavigate } from "react-router-dom";
 
 export default function UserPage(){
     const {user} = useAuthContext();
     const [loading,setLoading] = useState(true);
     const [folders,setFolders] = useState([]);
     const [error,setError] = useState();
+    const navigate = useNavigate();
     //get folders of user 
     // else show loading shit
 
@@ -43,7 +45,9 @@ export default function UserPage(){
         <div className="content user-page">
             <div className="page-header">
                 <p className="p-lg">Folders</p>
-                <span className="material-symbols-outlined">
+                <span className="material-symbols-outlined"
+                onClick={()=>{navigate("new")}}
+                >
                 create_new_folder
                 </span>
             </div>
